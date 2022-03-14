@@ -1,0 +1,38 @@
+<!-- <div class="row ">
+  <div class="col-md-12 page-404">
+    <div class="number font-green"> 404 </div>
+    <div class="details">
+      <h3>Oops! You're lost.</h3>
+      <p> We can not find the {{thing}} you are looking for.
+      </p>
+      <p>
+        If you believe your {{thing}} is correct, <br>
+        please <a href="{{settings.contact}}">report this error</a>.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<div class="not-found">
+  <div class="not-found-wrapper w-680">
+    <img src="img/xxx.png" />
+    <div class="not-found__message">
+      <h1 class="text-3xl font-medium text-water-blue-two pb-5">Search not found
+      </h1>
+      <p>Oops! The search string you entered was:</p>
+      <b>
+        <span ng-show="thing">{{ thing }} - </span>
+        <span ng-show="hash">{{ hash }}</span>
+        <span ng-hide="hash">empty</span>
+      </b>
+      <p>Sorry! This is an invalid search string.</p>
+      <p class="pt-5 pb-8">
+        If you think this is a problem with us, please
+        <a href="{{ settings.contact }}" class="text-water-blue-two">
+          tell us
+        </a>.
+      </p>
+      <a class="btn btn-blue" href="/">Back Home</a>
+    </div>
+  </div>
+</div>

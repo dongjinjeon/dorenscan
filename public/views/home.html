@@ -1,0 +1,144 @@
+<simple-summary-stats></simple-summary-stats>
+
+<!-- <div class="row">
+  <div class="col-md-6 col-sm-6">
+    <div class="portlet light">
+      <div class="portlet-title">
+        <div class="caption caption-md">
+          <i class="fa fa-cubes font_gray_e"></i>
+          <span class="caption-subject font_black_e bold uppercase">Blocks</span>
+        </div>
+        <div class="actions">
+          <div class="btn-group">
+            <a class="btn btn-med" ng-click="reloadBlocks()"><i class="fa fa-refresh"
+                ng-class="{'fa-spin': blockLoading}"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="portlet-body">
+        <div class="todo-tasklist scrollable">
+          <div ng-repeat="t in latest_blocks track by $index" class="todo-tasklist-item item-border-green row"
+            ng-class="(t.extraData.indexOf('Parity') > -1) ? 'item-border-red': '';(t.extraData.indexOf('Pool') > -1) ? 'item-border-blue': ''">
+            <div class="col-sm-5">
+              <span class="todo-tasklist-item-title"><i class="fa fa-cube"></i> <a
+                  href="/block/{{t.number}}">{{t.number}}</a></span><br>
+              <span class="todo-tasklist-date">
+                <i class="fa fa-hourglass-o"></i>{{t.timestamp | timeDuration }} ago</span>
+            </div>
+            <div class="todo-tasklist-controls col-sm-7">
+              <div class="todo-tasklist-item-text"><a href="/addr/{{t.miner}}">{{t.extraData}}</a><br>
+                by <a href="/addr/{{t.miner}}">{{t.miner}}</a><br>
+                {{t.txn}} txns
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-6">
+    <div class="portlet light">
+      <div class="portlet-title">
+        <div class="caption caption-md">
+          <i class="icon-bar-chart font_gray_e"></i>
+          <span class="caption-subject font_black_e bold uppercase">Transactions</span>
+        </div>
+        <div class="actions">
+          <div class="btn-group">
+            <a class="btn btn-med" ng-click="reloadTransactions()"><i class="fa fa-refresh"
+                ng-class="{'fa-spin': txLoading}"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="portlet-body">
+        <div class="general-item-list scrollable">
+          <div class="item" ng-repeat="t in latest_txs track by $index">
+            <div class="item-head">
+              <div class="truncate-txhash" style="float:left">
+                TX <a href="/tx/{{t.hash}}" class="primary-link">{{t.hash}}</a>
+              </div>
+              <div class="item-date" style="float:right">{{t.timestamp | timeDuration }} ago</div>
+            </div>
+            <div class="todo-tasklist-controls">
+              <span class="todo-tasklist-item-text">From <a
+                  href="/addr/{{t.from}}">{{t.from.substr(0,24)}}...</a></span>
+              <span class="todo-tasklist-item-text">To <a href="/addr/{{t.to}}">{{t.to.substr(0,24)}}...</a></span><br>
+              <div class="todo-tasklist-item-text" style="margin-top:4px;">{{t.value}} {{settings.symbol}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<!-- COMPONENT: DATA BLOCKS -->
+<div class="data-blocks w-full grid grid-cols-2">
+  <div class="data-block mr-2 shadow-md">
+    <h2 class="data-block__heading" ng-click="reloadBlocks()">Latest Blocks</h2>
+    <div class="data-block__entries scrollable"
+      ng-class="{ 'bg-water-blue-two': t.number > last_block }">
+      <div class="data-block__entry"
+        ng-repeat="b in latest_blocks track by $index">
+        <div class="data-block__entry-label">Bk</div>
+        <div class="data-block__entry-info">
+          <p>
+            <a href="/block/{{ b.number }}">{{ b.number }}</a>
+            <br />
+            <small>{{ b.timestamp | timeDuration }} ago</small>
+          </p>
+        </div>
+        <div class="data-block__entry-info">
+          <p>
+            <a href="/addr/{{ b.miner }}">
+              &#9488;&#9496;{{ b.extraData.substr(2) }}
+            </a>
+            <br />
+            by <a href="/addr/{{ b.miner }}">{{ b.miner }}</a>
+          </p>
+        </div>
+        <div class="data-block__entry-reward">
+          <p>{{ b.txn }} TXNS</p>
+        </div>
+      </div>
+    </div>
+    <a href="/blocks" class="data-block__btn">View all blocks</a>
+  </div>
+
+  <div class="data-block ml-2 shadow-md">
+    <h2 class="data-block__heading" ng-click="reloadTransactions()">Latest
+      Transactions</h2>
+    <div class="data-block__entries">
+      <div class="data-block__entry"
+        ng-repeat="t in latest_txs track by $index">
+        <div class="data-block__entry-label">Tx</div>
+        <div class="data-block__entry-info">
+          <p>
+            <a href="/tx/{{ t.hash }}" title="{{ t.hash }}">
+              {{ t.hash.substr(0,16) }}...
+            </a>
+            <br />
+            <small>{{ t.timestamp | timeDuration }} ago</small>
+          </p>
+        </div>
+        <div class="data-block__entry-info">
+          <p>
+            From <a href="/addr/{{ t.from }}" title="{{ t.from }}">
+              {{ t.from.substr(0,25) }}...
+            </a>
+            <br />
+            To <a href="/addr/{{ t.to }}" title="{{ t.to }}">
+              {{ t.to.substr(0,25) }}...
+            </a>
+          </p>
+        </div>
+        <div class="data-block__entry-reward">
+          <p>{{ t.value }} {{ settings.symbol }}</p>
+        </div>
+      </div>
+    </div>
+    <a href="/txs" class="data-block__btn">View all transactions</a>
+  </div>
+</div>
+<!-- COMPONENT: DATA BLOCKS -->

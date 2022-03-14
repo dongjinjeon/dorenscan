@@ -1,0 +1,109 @@
+.ico-acent {
+  background-image: url('../img/icons/acent.png');
+  width: 27px;
+  height: 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-hashrate {
+  background-image: url('../img/icons/hashrate.png');
+  width: 29px;
+  height: 31px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-market-cap {
+  background-image: url('../img/icons/market-cap.png');
+  width: 29px;
+  height: 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-difficulty {
+  background-image: url('../img/icons/difficulty.png');
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-blockchain {
+  background-image: url('../img/icons/blockchain.png');
+  width: 29px;
+  height: 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-blocktime {
+  background-image: url('../img/icons/blocktime.png');
+  width: 29px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-twitter {
+  background-image: url('../img/icons/twitter.png');
+  width: 22px;
+  height: 19px;
+
+  background-size: 22px 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.ico-discord {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAqCAMAAADoIdnnAAAAOVBMVEVHcEz///////////////////////////////////////////////////////////////////////99PJZNAAAAEnRSTlMAbkkkz5Lf867rf101FbwJoMbIKrHfAAABG0lEQVQ4y9XUS2KEIAwA0BBN+IN6/8M2ClUccXTZZuOHB0IgAgAgmS8xediClocYoyi/PEYSxs9sEaaflRZm/wvTdd2WvzDjaNaWmTWTcrbP2KNXOGR5F1EpDNRjOmaMsEfGAK7DCK6hr2zoMLqwsaNguDDVY/VcNGzosumDcXkdQ7mGevUfzJRWvYy5TF01kztYSUeSO1cbSw7tmZXOc+nQsPnMsHxUNj2WmTvYx2/YutAgpYZ5a5Wdyn74Xer5o5EM7qlwSa09xo+8bUWLhg055SixW8fK6bKnJuzprLOIyvaOJU+pObLNw18vwJf/kPs/0jw3zN0yztPBIN06D+Zgsn1jP6jWlobHoHcM1Du2ls0bBvhqNKkN+AEWvkMU4dbisQAAAABJRU5ErkJggg==);
+  width: 19px;
+  height: 21px;
+  background-size: 19px 21px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.ico-telegram {
+  background-image: url('../img/icons/telegram.png');
+  width: 22px;
+  height: 18px;
+
+  background-size: 22px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.ico-youtube {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAkCAMAAADxcOlCAAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEHRSTlMACnclvpjd8dHlGEmGXK2sxai8zQAAAMdJREFUOMu1lcEOwyAMQ1MgBFoo/P/XjnVStwNhi6X5hqonGpzERJf2ozrmM4QUs4j0W+OQYwqhMbt67HRrK7n/qFy2F+NjNyj66x4TM6jnXaUbVQaUrVAeFXWzPFU7VMnZIUdsh5jarNSwhBrNvic6VuYFSlOINie6vVOb0tXDrBslGjQsVEqTFURKaUJ9BSmlfYHmpf0DUn4PegjoySFzgTZKWMMCo3FiQwiNO7RYoBUGLUtsLUMBAEUNFmrv+Gx6fJ6f8fkAfKxl0Gqgol8AAAAASUVORK5CYII=);
+  width: 26px;
+  height: 18px;
+  background-size: 26px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.ico-instagram {
+  background-image: url('../img/icons/instagram.png');
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.ico-medium {
+  background-image: url('../img/icons/medium.png');
+  width: 30px;
+  height: 18px;
+  background-size: 30px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}

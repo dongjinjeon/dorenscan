@@ -1,0 +1,55 @@
+<div class="card my-3 p-5">
+  <div class="duration-200" ng-class="{ hidden: !loading }">
+    <div class="animate-pulse flex space-x-8">
+      <div class="rounded-full bg-water-blue-two h-40 w-40"></div>
+      <div class="flex-1 space-y-6 py-1">
+        <div class="h-8 bg-water-blue-two rounded w-3/4"></div>
+        <div class="space-y-2">
+          <div class="h-8 bg-water-blue-two rounded"></div>
+          <div class="h-8 bg-water-blue-two rounded w-5/6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table id="datatable" class="table-fixed my-3 w-full border-b-0" ng-class="{ hidden: loading }">
+    <thead class="bg-pale-grey">
+      <tr>
+        <th class="w-2/12 py-2">Hash</th>
+        <th class="w-1/12 py-2">Block</th>
+        <th class="w-2/12 py-2">From</th>
+        <th class="w-2/12 py-2">To</th>
+        <th class="w-2/12 py-2">Value</th>
+        <th class="w-1/12 py-2">Gas</th>
+        <th class="w-2/12 py-2">Age</th>
+      </tr>
+    </thead>
+    <tbody class="text-warm-grey-two text-center">
+      <tr ng-repeat="t in txns track by $index">
+        <td title="{{ t.hash }}">
+          <a class="a" href="/tx/{{ t.hash }}">
+            {{ t.hash }}
+          </a>
+        </td>
+        <td>
+          <a class="a" href="/block/{{ t.blockNumber }}">
+            {{ t.blockNumber }}
+          </a>
+        </td>
+        <td title="{{ t.from }}">
+          <a class="a" href="/addr/{{ t.from }}">
+            {{ t.from }}
+          </a>
+        </td>
+        <td title="{{ t.to }}">
+          <a class="a" href="/addr/{{ t.to }}">
+            {{ t.to }}
+          </a>
+        </td>
+        <td>{{ t.value }}</td>
+        <td>{{ t.gas }}</td>
+        <td>{{ t.timestamp }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

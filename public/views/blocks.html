@@ -1,0 +1,56 @@
+<div class="card my-3 p-5">
+  <div class="duration-200" ng-class="{ hidden: !loading }">
+    <div class="animate-pulse flex space-x-8">
+      <div class="rounded-full bg-water-blue-two h-40 w-40"></div>
+      <div class="flex-1 space-y-6 py-1">
+        <div class="h-8 bg-water-blue-two rounded w-3/4"></div>
+        <div class="space-y-2">
+          <div class="h-8 bg-water-blue-two rounded"></div>
+          <div class="h-8 bg-water-blue-two rounded w-5/6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table id="datatable" class="table-fixed my-3 w-full border-b-0"
+    ng-class="{ hidden: loading }">
+    <thead class="bg-pale-grey">
+      <tr>
+        <th class="w-2/12 py-2">Hash</th>
+        <th class="w-1/12 py-2">Block</th>
+        <th class="w-2/12 py-2">Miner</th>
+        <th class="w-2/12 py-2">Parent Hash</th>
+        <th class="w-2/12 py-2">Difficulty</th>
+        <th class="w-2/12 py-2">Total Difficulty</th>
+        <th class="w-1/12 py-2">Age</th>
+      </tr>
+    </thead>
+    <tbody class="text-warm-grey-two text-center">
+      <tr ng-repeat="b in blocks track by $index">
+        <td title="{{ b.hash }}">
+          <a class="a" href="/block/{{ b.number }}">
+            {{ b.hash }}
+          </a>
+        </td>
+        <td>
+          <a class="a" href="/block/{{ b.number }}">
+            {{ b.number }}
+          </a>
+        </td>
+        <td title="{{ b.miner }}">
+          <a class="a" href="/addr/{{ b.miner }}">
+            {{ b.miner }}
+          </a>
+        </td>
+        <td title="{{ b.parentHash }}">
+          <a class="a" href="/block/{{ b.number - 1 }}">
+            {{ b.parentHash }}
+          </a>
+        </td>
+        <td title="{{ b.difficulty }}">{{ b.difficulty }}</td>
+        <td title="{{ b.totalDifficulty }}">{{ b.totalDifficulty }}</td>
+        <td title="{{ b.timestamp }}">{{ b.timestamp }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

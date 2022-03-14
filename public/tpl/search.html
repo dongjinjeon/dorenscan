@@ -1,0 +1,83 @@
+<!-- COMPONENT: FILTERS -->
+<div class="filters h-12 relative flex justify-center">
+  <form name="form.searchForm" class="filters-form w-800 flex"
+    ng-submit="handleSubmit(form.searchInput)">
+    <div class="filters-form__select-wrap border-r border-pale-grey-two">
+      <select class="filters-form__select js-filter-select"
+        ng-model="form.searchFilter" ng-change="filter(form.searchFilter)">
+        <option value="">All Filters</option>
+        <option value="addr">Addresses</option>
+        <option value="tx">Transactions</option>
+        <option value="block">Blocks</option>
+      </select>
+    </div>
+    <div class="filters-form__input-wrap w-full">
+      <input autocomplete="off" name="explorerSearch" type="text"
+        class="filters-form__input"
+        placeholder="Search by Address / Txn Hash / Block"
+        ng-model="form.searchInput" ng-focus="showOptions()"
+        ng-change="handleChange(form.searchInput)" />
+      <ul class="filters-form__results"
+        ng-show="form.searchInput && displayOptions">
+        <div class="animate-pulse px-6 space-y-4 pt-3" ng-show="loading">
+          <div class="rounded-full bg-water-blue-two h-4 w-1/5"></div>
+          <div class="rounded-full bg-water-blue-two h-4 w-3/5"></div>
+          <div class="rounded-full bg-water-blue-two h-4 w-3/5"></div>
+          <div class="rounded-full bg-water-blue-two h-4 w-3/5"></div>
+          <div class="rounded-full bg-water-blue-two h-4 w-3/5"></div>
+          <div class="rounded-full bg-water-blue-two h-4 w-2/5"></div>
+          <div class="rounded-full bg-water-blue-two h-4 w-3/5"></div>
+        </div>
+
+        <span
+          ng-if="getDataDone && !form.searchFilter && !data.addrs.length && !data.txs.length && !data.blocks.length">
+          <li class="label text-warm-grey-two">
+            No results.
+          </li>
+        </span>
+        <span
+          ng-if="getDataDone && (!form.searchFilter || form.searchFilter === 'addr')">
+          <li class="label text-warm-grey-two"
+            ng-class="{ hidden: data.addrs.length || !form.searchFilter }">
+            Addresses - No results.
+          </li>
+          <li class="label" ng-class="{ hidden: !data.addrs.length }">Addresses
+          </li>
+          <a href="/addr/{{ a }}" ng-repeat="a in data.addrs track by $index">
+            <li>{{ a }}</li>
+          </a>
+        </span>
+        <span
+          ng-if="getDataDone && (!form.searchFilter || form.searchFilter === 'tx')">
+          <li class="label text-warm-grey-two"
+            ng-class="{ hidden: data.txs.length || !form.searchFilter }">
+            Transactions - No results.
+          </li>
+          <li class="label" ng-class="{ hidden: !data.txs.length }">
+            Transactions
+          </li>
+          <a href="/tx/{{ t }}" title="{{ t }}"
+            ng-repeat="t in data.txs track by $index">
+            <li>{{ t }}</li>
+          </a>
+        </span>
+        <span
+          ng-if="getDataDone && (!form.searchFilter || form.searchFilter === 'block')">
+          <li class="label text-warm-grey-two"
+            ng-class="{ hidden: data.blocks.length || !form.searchFilter }">
+            Blocks - No results.
+          </li>
+          <li class="label" ng-class="{ hidden: !data.blocks.length }">Blocks
+          </li>
+          <a href="/block/{{ b }}" ng-repeat="b in data.blocks track by $index">
+            <li>{{ b }}</li>
+          </a>
+        </span>
+      </ul>
+    </div>
+    <div class="filters-form__btn-wrap w-12">
+      <button class="filters-form__btn" type="submit"></button>
+    </div>
+  </form>
+</div>
+<!-- COMPONENT: FILTERS -->

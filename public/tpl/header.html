@@ -1,0 +1,316 @@
+<!-- <div class="page-header-top">
+  <div class="container">
+    <div class="page-logo">
+      <a href="/">
+        <img ng-show="settings.logo" src="{{settings.logo}}" alt="logo" class="logo-default" />
+      </a>
+    </div>
+    <a href="javascript:;" class="menu-toggler btn btn-sm green-haze btn-outline">MENU</a>
+    <div class="top-menu">
+      <ul class="nav navbar-nav pull-right">
+        <li class="dropdown">
+          <form name="form.searchForm" class="search-form">
+            <div class="input-group">
+              <input type="text" name="explorerSearch" class="input"
+                placeholder="Search by Address / Txhash / BlockNum / BlockHash" ng-model="form.searchInput"
+                ng-keyup="$event.keyCode == 13 ? searchQuery(form.searchInput) : null">
+              <span class="input-group-btn">
+                <a class="btn" ng-click="searchQuery(form.searchInput)">
+                  <i class="icon-magnifier"></i>
+                </a>
+              </span>
+            </div>
+          </form>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="page-header-menu">
+  <div class="container">
+
+    <div class="hor-menu hor-menu-light">
+      <ul class="nav navbar-nav">
+        <li class="">
+          <a href="/">HOME</a>
+        </li>
+        <li>
+          <a href="/accounts">ACCOUNTS</a>
+        </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+          <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> DOREN
+            ECOSYSTEM
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-left">
+            <li>
+              <a href="https://doren.io" target="_blank">
+                <i class="icon-pin"></i> DOREN HOMEPAGE </a>
+            </li>
+            <li>
+              <a href="https://acent.tech/assets/pdf/acent-whitepaper-english.pdf" target="_blank">
+                <i class="icon-pin"></i> DOREN WHITEPAPER </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+          <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> CHART
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-left">
+            <li>
+              <a href="/stats/hashrate">
+                <i class="fa fa-line-chart"></i> HashRate Growth </a>
+            </li>
+            <li>
+              <a href="/stats/miner_hashrate">
+                <i class="fa fa-line-chart"></i> Miner Distribution </a>
+            </li>
+            <li>
+              <a href="/stats/blocktime">
+                <i class="fa fa-line-chart"></i> Blocktime Chart </a>
+            </li>
+            <li>
+              <a href="/stats/The_bomb_chart">
+                <i class="fa fa-line-chart"></i> The bomb chart </a>
+            </li>
+            <li>
+              <a href="/stats/supply">
+                <i class="fa fa-line-chart"></i> Total Supply chart </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+          <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> FAUCET
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-left">
+            <li>
+              <a href="http://test.dorenscan.com:3001" target="_blank">
+                <i class="icon-pin"></i> DOREN testnet Faucet</a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="icon-pin"></i> DOREN Pool </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="icon-pin"></i> Bitcoin Mining </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="icon-pin"></i> Testnet Mining </a>
+            </li>
+            <li>
+              <a href="https://www.coincalculators.io" target="_blank">
+                <i class="icon-pin"></i> Coin Calculators </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+          <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+            dAppstore
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-left">
+            <li>
+              <a href="https://dappstore.me/" target="_blank">
+                <i class="icon-pin"></i> homepage </a>
+            </li>
+            <li>
+              <a href="https://play.dappstore.me/games" target="_blank">
+                <i class="icon-pin"></i> Games </a>
+            </li>
+            <li>
+              <a href="https://play.dappstore.me/top-defi-charts" target="_blank">
+                <i class="icon-pin"></i> Defi </a>
+            </li>
+            <li>
+              <a href="https://play.dappstore.me/top-nft-charts" target="_blank">
+                <i class="icon-pin"></i> NFT </a>
+            </li>
+            <li>
+              <a href="https://dappstore.me/dappx/" target="_blank">
+                <i class="icon-pin"></i> dAPPX </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+          <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Wallet
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-left">
+            <li>
+              <a href="https://browseosiris.com/" target="_blank">
+                <i class="icon-pin"></i> Osiris Browser </a>
+            </li>
+            <li>
+              <a href="https://#" target="_blank">
+                <i class="icon-pin"></i> DOREN coion wallet </a>
+            </li>
+            <li>
+              <a href="https://#" target="_blank">
+                <i class="icon-pin"></i> Telegram Wallet </a>
+            </li>
+            <li>
+              <a href="https://#" target="_blank">
+                <i class="icon-pin"></i> Kakaotalk wallet </a>
+            </li>
+            <li>
+              <a href="https:/#/" target="_blank">
+                <i class="icon-pin"></i> Slack Wallet </a>
+            </li>
+            <li>
+              <a href="https://#" target="_blank">
+                <i class="icon-pin"></i> Discord Wallet </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-dropdown classic-menu-dropdown ">
+          <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+            Community
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-left">
+            <li>
+              <a href="#" target="_blank">
+                <i class="fa fa-group"></i>
+                <span class="title" data-toggle="tooltip" title=" Telegram"> Telegram </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://#" target="_blank">
+                <i class="fa fa-group"></i>
+                <span class="title" data-toggle="tooltip" title=" Discord"> Discord </span>
+              </a>
+            </li>
+            <hr>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fa fa-bar-chart"></i> Sitemap </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+<!-- COMPONENT: HEADER -->
+<header class="header bg-white h-20">
+  <div class="container">
+    <div class="branding h-full">
+      <a href="/" class="h-full flex items-center">
+        <img
+          src="data:image/png;base64,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
+"
+          alt="" />
+      </a>
+    </div>
+    <div class="menu-container h-full flex">
+      <nav class="menu w-680 h-full flex flex-col">
+        <ul class="inline-flex h-full">
+          <li>
+            <a href="#" class="group-hover:text-water-blue">DOREN Ecosystem</a>
+            <ul
+              class="dropdown min-h-dropdown w-dropdown group-hover:bg-off-white group-hover:border-water-blue">
+              <a href="https://doren.io" class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  DOREN Homepage
+                </li>
+              </a>
+              <a href="https://doren.tech/assets/pdf/acent-whitepaper-english.pdf"
+                class="duration-200 hover:text-water-blue" target="_blank">
+                <li class="py-2.5 text-center">
+                  DOREN Whitepaper
+                </li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="group-hover:text-water-blue">Charts</a>
+            <ul
+              class="dropdown min-h-dropdown w-dropdown group-hover:bg-off-white group-hover:border-water-blue">
+              <a href="/stats/miner_hashrate"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Miner Distribution
+                </li>
+              </a>
+              <a href="/stats/difficulty"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Difficulty Chart
+                </li>
+              </a>
+              <a href="/stats/supply"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Total Supply Chart
+                </li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="group-hover:text-water-blue">Faucet</a>
+            <ul
+              class="dropdown min-h-dropdown w-dropdown group-hover:bg-off-white group-hover:border-water-blue">
+              <a href="http://test.dorenscan.com:3001/" target="_blank"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  DOREN Testnet Faucet
+                </li>
+              </a>
+              <a href="https://www.coincalculators.io/" target="_blank"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Coin Calculation
+                </li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="group-hover:text-water-blue">Community</a>
+            <ul
+              class="dropdown min-h-dropdown w-dropdown group-hover:bg-off-white group-hover:border-water-blue">
+              <a href="https://www.facebook.com/DoRenproject" target="_blank"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Facebook
+                </li>
+              </a>
+              <a href="https://twitter.com/DoRen51396850t" target="_blank"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Twitter
+                </li>
+              </a>
+              <a href="https://t.me/DoRen_Project" target="_blank"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Telegram
+                </li>
+              </a>
+              <a href="https://doren-project.medium.com" target="_blank"
+                class="duration-200 hover:text-water-blue">
+                <li class="py-2.5 text-center">
+                  Medium
+                </li>
+              </a>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo-access">
+        <p>Access Doren DIMS Via</p>
+             <a href="https://dorenims.com/global/home" target="_blank">
+        <img
+          src= "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKAAAAAnCAYAAACIekNNAAAABHNCSVQICAgIfAhkiAAAFHNJREFUeF7tXAl4VOW5fs+ZLZlksgBG9k0xEZRNrTtB1NLWBcRal7ogytOnt7eAUJdrESrSPlgFwWIVl4hSefReq+JtvWKBJiCbUHZCSMhKWMKWTCaznjlz7vedOf9wMkzIQij4kKN5Zub82/d///u/3/Kfg4SOq0MD51AD0jkcu2PoDg3gnABQ82hZbl9w6v6ihg+uzO2yp2MdLlwN/FsBqGmaI+hXfvlNXvCRle/bh4163PvQmP/s9PGFq/6Omf/bAKgElNHbVgWe/t/X5ZurdznsmgaMnV7/4Aol8/MUBVPmTJNe7liOC08DZx2AwWAw51CJOuOLV8I/KsxPzoxETip50NPqvJqwYyzd6T9nqnTWZbnwlvf8n/FZW3TNrXVyB4LPfDk/cN/mL5L7B700FP3PzGfJkuAcYYGtZ3R4JdSgzX3OJZ//6uqQsL010O4AJD/PqviUiSsWe59cs8Qx1F1jkUGg40tLBpKvt8I+kLBG/1NdHCj9yr/j29/X79ixvmtrJvfss8+mBwKBIaJNUlLS9pdfftmdqA9R12q1Vs6dO7dy2rRpfcLhcB/xu6lxp06dOkRV1fT4vkV7brdgwYLVrZG7o25jDbQrABW/kruzIPDb5Qsx4mChzcGUxyCDVYJ1sAzH1RZIjuiQdYd3Y/fGOfWK4g3WHd0VLiop6d6axZk8efIISZIKErTZQmMSLhZ8KMpEXbo/k+7Pot8zqO2LVP7Z/Pnz7000LoOMwFehbxxNy2WgMZDJpfiMbo0Sbaislr5PMY/Xmnlc6HXbBYDERP0P7VNnfv2ackfxakdnjf08w9zK/WXYbrBBTo8OFfSdwN4Nb8F9rBi9Bt8ZPFjyt4Yj1etCZwDAVQQCMxDHE7j60VB5BK4neMzTABAWi6Uvs2I8EEwgjQFwypQpKw3w5dGYH9D3kQw+Gi9TgPRCB1Rr539GACSlu07U+J5Z8YbywLZl1kuVAFlbIjwOJzQCnCXXDrl71LVT1RAqtn2Myi3/g+7yYBy2F8Ge4fIQ+Bq4vK0AFKxmnjgB5T36PcHEeDpbJmBAbhYDqujDMNnlDCwzA1K/7ExsIWBfJeoSUCdRvTEMyA4WbC38dJ5q/UXKlimt8ljBh97/+O4jy/D6GplQFu1KI8OLqwh4A60UbUT7Plq1AbtXvwqbV0ZX6xDsD66DH7WI2Dy1SjgYaG8ACgBxvwSKTk0xIM2DQdbP4XBkmP1Hqv8o3WeGi87JMMEMQDa55BP2a8rfbL02L+wWrQagn/y8kjW+5/PfVEcc2WtPihDlSezr8X+D7IgMt0FKinbbcKISRWvn46K6OozodCMWVeYhCZkIym5EKB/DAFQjSoC/tycD8tjCXMqyPJQDiUQMyIzIvmA8ixIAy7gPKiunj1EmAM6l31MZhFT2OX0uI4B/eToIkRx/pfI6+ptggFn3QznAoXnP4/5NQNflie/PbN6Z3YVrIerxBqPvGWZZRD1j/HGmPleRTqbS2JNMMpVTQHYLuyJG4PU5b0wa9zFmdePeGJbb7AfzBiYX5p558+ZtN3TeSDZ2Y7jN6fTTYgD6fFrPE+W+WStfD9xVttbWBVoUdMx8ag8ZkWuToGVGza0S8qJ08/uoLvo7eshpyEnNQaWvAkXeEtDkdfDxpVrPDgOaAciLZ4DpFBPMZaTomfQ5jJmS65HS7qZ7y1j59PmYGYBGObPjZPo+3AAUByHzm1I0bwQCzK1iERgQHPgYoBnZVDs27VT2unnxDNA+Sjr8UCw6lxugmCeAaf4dP74xBwZsbGwzwBi41P/rNputggKuPALYVM4YiPrcH+nmRQ7KjECN60xg8DLgqF6+yAy0CwBpMGftocBTBW97Hyv6yjpA8TNmo9FtJN0C5VoHIj3J3NKlEbCq93yJks2LkZreA64ul6Fy5yd6mV1KQUjz6t+tDhdSMnqh7vim2hzbT23b/Us854gBGZx92dyK3W4oeBibWRHxJgowjFQMt59vBCE6W5gBIzZCWwCYCDh0by4t9uvE6DPiWdDMjLyJeGxmxNYCkN0PmvsydjEYmDS3OgFA6rLC6Dc2TwOEM0iuWVRvDNXPFZmFMwIgKV0K+UMPbFzqm7L1Y+0q71HZwgEGu3qqTUJoaBLC2faYn1dXsxuFBXSaJlmQ2W0oPBTl1h7ais7duuL4ocMYlPwzFAY/1dnv8pumMVzRv3S7/2B9F2299w13ewLQYIA6NpXN+IB6ekWYXDYnJN82YZKFGT9dhCsYkya0ygw0E+MxYxSYTGse+ZxTOYfJ7Ev1dBPM5oxk6W9uZ+7PmBMDb1oTZvhRaltngG4u1xMbQIzBvznqF4ASMvHYwgQb43CUv0wAUbC1Ab5TTKpgPiofSX/beFMze7cZgCFf6Np96/wz17+t5B4rlp0c1urgkyUEBtgRIPDByOf5PTUo3vAGPCfK0Gvg3airKcTRynWwEzb9DQ3IHjYMe7duxRDnA6jV1qLKvx+Dr3oe9qRUDKk6rGypPaqsa/hTuwFQKJCkHSeAdJogRACQI9kF1GYL/Q0XQUk8AI0oGOagxQTAU6LpRAxomDtmTl6oJk1wPHMxMzEDGRuGGY59vhgTxZndRgCM3xgCUATGZewfJ0qmG/OazG1bA0B2KdjNIB1NoE02uU0+YMFH5V//67X00ZzPMw4xEOpmg/dqJ9T0k2mVSk6r7PoUXS8ZBYezEw6VfINIbRmSU1IAl0tnPgHAm9IeQ4rjIL5VijGg38OwO10YvP9IePPxg6H13oVtBiAzDzMMLzaBKJ2+P26kT5rNAwpmi0u7xNolAKAehDBQmSEMtjptHrAJU6r7Ua0BoJFa4iH19BLNsU8iM8z+mxlUzZlg4fOxT2lsjiHxroQJgBUGC55igkkmPS/KgDPM8iS6t7251FTCIGTFW6UFu95NJ0dVQpgi2vrrUhHqbhPWATVl+SjZuEgHnTOjD3z11ait3oxOXS8m1vPC722I5gOpxWXEgEd2l2O482ew2spRmT0YSd6k9gRgTC4jOv0nfdK8Tx6RNceA3IFIPJsT04lMsGFudNBxOzZf9MEnIQmj4QRMxtEnXy1mQMPfZB8zZv6EP2hOohssqZthoZTmACiiWg4kuA2B9zP6Ps4IKnRfki6O4nVwNRWEmAMVbsDyxQdLsYUyfUkIwJWLSgoK38scwSDyUiLZnavrGt7aChSu/iNCFOV27j5c9/PY90ty2mFxKFCDNt3s8pXl6IIjwWM6AzpLNfSw5mLEuKX4uPw+yO4MOpJLIxN8RNl0/KDSFgZMNJnz8R6bI2YCkw+4iszTOEVR+iZKwwiQiWjZ2ByTyEdbZgabMOXmSNlg8kZmr6k0DAFNT6tw/2b/0gCxHlhREUfW01qShjHXMfUZi8ybWpsmAViUlz6C83tlWaXQbrwCZZvzcKxiDbpdfgcajpdTcnkt1FADLh0yGPu279D772K/CPd2HYPO9s44FjiOt6vf0wE4zHEUDcX36gB0d8nC+k13oiGUieyyA8rq+nXePfXL/RSE9KYuwucjiDpkOnsaSAjAVe+UFJQQAJkBy207sMa7EFn9RiA5rScO7llGCeZSim67wX/4EHxUx2lxYkr/Sehh74GA4keFT6a8Xz2WnZhFAByOmQ+ux9I5z2LkfR+h7qKuWLf+Thw+Wo0du947HlTchTS9mXtLS/959qbZ0fP5qoGEAMx/p3R1yfspN7MXVxbYgDV0KpWU1h21BzbDkRlEir03TtTU6HO6LWsUrku7Fp0tzHph7PQ4UEcmOqIexrf+hVEAPkQAfOUZ5N67FFuD2fhua1Voz87d+4Oh4B/27tvHDm0H852vCDnLciUEYME7+1aXfpB6M4fAZcEN+L/6OTrjJaU4cWBfaUykOy7+CUZ3uh3+kB/FPjvKvRH4FTdCyRrsAzph49bf4PIfDMP0ezYgb84k1Hb6Rt1QtqOWwvNFfkWZW1VVxacIHdcFrIGEAFzz7r7VZR9EGbCUGHB5aDbUQPS0wzh9Q3bKADzZ7Un4CHy7PDKq/WEo1hCSRw2HvWsPuMv3YMemJzDgyuEYlLFR+9u61Iajxw7/PaSqL5SWlu67gHXeMXWTBpoEYNUS582cA9zn34iS/v+gZDLnaKPXDzvfjhtdN8AbDGGX14EjAS9CVgUZ999CaYkU+P1euCsLUVn0HCx2h9997NgOMrf/1d5+nmt64VjP7IFfxK+o83dF3aFKPXwvZW9qr9V2vrD3Gli0A77f5Rxsrk+S668kV+xB17QXdk+qf2nQyXPdZ4pcLnvk1kSyJ+rb9ds9fCYNVZYLWyKDqO/5/eWxJ3qak1mU620ljdZeXtowO2dVc+1ao5dEfSUE4Ld5+1bv/zDpZgrFUUIALOq7IgbAiX3G42KVGC7gww6vFW5JRdINOZBSMhEhE+2j4EPx1qBy4xKt3ltQEQgFZp8tP48XWrXKv2awWTQSSpPSPYr0WZpDfZxOEvm0YQkvMgNVkrTeYYvlUx1ADACbNo4U7VYlywFeVEs48gPq6zsduEGtKEH5n4j+y1XJ+kmsnAbg8fDHHA+D3qqqPw3Dup5kea4xAAv56PweATgGJMvHdVzTi7IlSR3N7XjD8ILSmWc97eTrWD5uIxaZZGwsA4FYzNnphEvoQcwp+rtxXwwC1ge3o8z9BlWS0sRGNcCnj+mavvtVNSIt5bO7WDlv+JC8UujG0C097ZNYL2aZeFyxFkJm1ltCAK7NK1598C9OMsFAMQGwsM9KFBMDjs0ag/7SpXBHZOx2++GRI0j/8W0EvGRivQaEg7U4XpRPT7xsxFXX5ODxCRORnp7OSekKwnIFHejROasl32aLbE9OTq5obnc1V64DULLMsUB9RYXlaUskMhBS5EpyHb4lpdxEJ5/vaFLkPiki7Wf2YGAwYHkhaYe/wf1LUmSG3pbK6AGfrRGLnJe4PHw/NHknnYP/o1E5Ir8Sfeqy8EaA9pZn9qDYOy4sJw1VSwvwZBQAu1+lkfuxDPQs0U8Y1BYtfL8Gy1eypF5B+uot7vFc9M2jA/s0MkTHzqM+J3MfXN+K8PXxfdEcrzDp4xfU9w7BzjowSW+q1TIvtlHtkcXmjUIbZzDNc1G0b6lK13NTejllbbS7Y3pH5CHWxykApK2asfmT8n/tf9dKB+MS9vo2YlfvVehb2RmXStkU6fqxJ2CBL+xF2qgbKfnXFf6AB1rdXhwu/gj9B6Thl7+ehEsuufS0+KFx6giU+Zok56elOD7gpy6aA1x8uQCgDHV0w0sDZxu7WwclK4gVS3V2kpLf4TJmnbBsXWqNKNcTQH7D95iNYqwVkse77KB3U9SJ8eXcX7QeMYoUWUSbid8N4T4n0o5+VbCVkMHMgAYAlzAzRQGqX48wKAm8M4RZ53oka0FEs+xi88fMx+NyZQGomAxxMoYistsqa71YD2JO3Da+L3p6c5znpYEjuU/Rv9k94HusT0lDX2K7p1x2dSYD0hJWp+qfinY7b3LeLCzjSf2dqhea74T4tRF6EW5KDIANDaGhES1MT2dIY8vzj6CSyZ6cwL2+TdjeeyWGllyGcEhCcTgFDfDBefVgoGsvSMFDKF2bh8yso7j/gYdx59i7+Uy2tVjipfxClqwvpqba+YiqRZcAoABbEwCM+WNsJn11Ec2VioVCEakvFE6PwLI8Zjaj/pm+67k/US4AqJtfe+S1k2xWlE1q6sGsE2OSFwrzxSLHAKmDO/Ia/+a2LLvOuDS2bnpJNmLWWcxIZnOcCICGDDEZmVHDsm29TVN6sAxmAMb3pZt+koXNX+r0olFmuc3+nOiD5Y0CUsvgTcl1eHzdzSHQS3IkXR8jgV7YvMevTUIAejy+12hnTBGrXkEA3L8w+nLHHu932NZzFfoXDkYlBR3BfplwDr0BCrGet3w56k58jTvvGos77riLzG0aUml1+akZflK6LRcxy3yXy/lUS9o2CUA2s2pkKUXs80kY+rdnIk/TYlfouzq6+Pwy/CMMANoqtwkTbFLOKeUyvf9Cs/qVycySiddVVBVlWjar4pJGU1/kCkQvsdsN369K+E4MBAYlgy7qs8rPx/uDZgA2JYNG1oOBLBb79AC0LGcGp9VZwfpobIKLsklXf9D1YujKkH8nm3bBeGzW+T67CafTi2Btk4mPkUGMAQl88wl8/IRv7KrIr8HBP0cBtMe7CVt60SHFlhy4k8LofOsP4du/HtWlH+OG3Gvw4P0/R1ZWFlLTUpCU5NCfeGbqVOkvqCjR3628CIQLCISxDdHK5s1W13exESGLxWrPiLlZAc5hBQ56PCEc1AMnw8Q3itATyBYf1ben+JK73k8v5qCvudPKghocfjMCK+35quzNWHVgFY5u7YnOw4bgcMlf0LuvEw8++Ciysy+jR6+S4XQmc7AUNb0EvAAzZUiBzUGvY7YBgBy0pKcl92vPiZr7ijIRejN7sVMtzOnZGu986pfNLjH5QwbrDjb7oInkbClI2zpHqd7jI59Liv0LA9xR1ZoaBHdryPyxjC07v8N/L1tGD5x2QkpKNZ6Y+AsMHXY1PYigID0jDXZbNEHN4FNUFT6vnx65p6dj6B9EaPulbU9zOYe2vX0LWpKvx2mCluT1WtDb966KzoSzc/aea8Elj8c/koxtowcBaqqPwMAVtmzZjDcX/RkP/PxhjBk7jp50pked6fK4Ke1CJvbii+n9JKITn89PLgy9hG4/+dxgWydHPHqLy5Wc39b2He2+PxrQw1UGYUTDYiIxfvsJDEC7XUZyqhO1bjeSybfLyNRfGjvlOnG0FilUz5HMLwSf2UU4rqT4ZXwH+M5Mj9+n1o3yJfUN/vEUOY73NXhzk8iva4v/1sbJF1DKcXFaavLiNrbvaPY91UDChJ3f7++rqBhJuZ+hZJ5HxvuIZz5XekKY3h+l9ME2mwX57XEqcuYydfRwLjTQ4oyxbqajr91R0p+iZlPkTKaT8klR881mlI/dYpOhiJZzcPybwpL8DvN6Lpb5/B3z/wFOOgL6nTWZtQAAAABJRU5ErkJggg=="
+          alt="" /> </a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- COMPONENT: HEADER -->

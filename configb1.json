@@ -1,0 +1,58 @@
+{
+    "nodeAddr":     "localhost",
+    "gethPort":     8545,
+    "startBlock":   0,
+    "quiet":        true,
+    "syncAll":      true,
+    "patch":        true,
+    "patchBlocks":  100,
+    "bulkSize":     100,
+    "rewards": {
+        "estimateUncle": 0.033,
+        "enableECIP1017": false,
+        "genesisAlloc": {
+            "total": 49922489.5246415000,
+            "Development": 17000000,
+            "Private": 13000000,
+            "Alpha beta mining": 922489.5246415000,
+            "Marketing": 9000000,
+            "Airdrop": 4000000,
+            "Burned": 1000000,
+            "Bounty": 5000000
+        },
+        "blocks": [
+            { "start":      1, "reward": 9e+18, "uncle": 0.90625 },
+            { "start": 600000, "reward": 5e+18, "uncle": 0.90625 }
+        ]
+    },
+    "settings": {
+        "symbol": "ACE",
+        "name": "ACENT Network",
+        "title": "ACENT Network Block Explorer",
+        "author": "DongjinJeon",
+        "contact": "mailto:support@dappstore.me",
+        "about": "This is an open source Blockchain Explorer.",
+        "rss": "https://www.dappstore.me",
+        "reddit": "https://www.reddit.com/r/ethersocial",
+        "twitter": "https://twitter.com/ESNfoundation",
+        "linkedin": "https://www.linkedin.com/company/ethersocial",
+        "github": "https://github.com/dapstore",
+        "logo": "/img/explorer-logo.png",
+        "customCss": "green-haze.min.css",
+        "copyright": "2020 &copy; ACENT Network.",
+        "useEthFiat": false,
+         "miners": {
+            "0xfc2e38a0862c4750a8f33103ad67ce442fa96ca6": "1",
+            "0x6234348ac008930fc73a9a9eb5cb9b1c11dcac97": "2",
+            "0xe0eebb74e7ec81eac44cc72820a505049d8f1d76": "3",
+            "0x95c0a32a1c89c09133f4042b2590fea4c3b467b7": "4",
+            "0xcb3626ff5e296bb100201e3c47897baf44e3eadc3": "5",
+            "0x498c6f9063705054fae07260d4176c3d55a97650": "6",
+            "0x18fcccbe8d92b481a0e9cc4b55666da9bc3b08e7": "7",
+            "0xd144e30a0571aaf0d0c050070ac435deba461fab": "8",
+            "0x9bcf3e61f09fd2c9e9d60b5a590ed3ca726f6e7d": "9",
+            "0xf35074bbd0a9aee46f4ea137971feec024ab704e": "10",
+ 
+         }
+    }
+}
